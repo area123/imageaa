@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            const img = document.getElementById('a');
+            img.addEventListener('click', () => {
+                console.log('클릭');
+                if (img.src === 'https://aaaa-9yv7.onrender.com/images/mobile.jpg') {
+                    img.src = 'https://aaaa-9yv7.onrender.com/images/main.jpg';
+                    console.log(img.src);
+                } else {
+                    img.src = 'https://aaaa-9yv7.onrender.com/images/mobile.jpg'
+                }
+            });
+        };
+    </script>
 </head>
 <body>
-
+<div>
+    <img id="a" src="images/main.jpg" alt="">
+</div>
 </body>
 </html>
